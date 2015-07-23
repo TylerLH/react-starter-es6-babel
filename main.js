@@ -1,14 +1,14 @@
 import React from 'react'
 
 class App extends React.Component {
+  state = { n: 0 }
   constructor () {
     super()
-    this.state = { n: 0 }
   }
   render () {
     return <div>
       <h1>clicked {this.state.n} times</h1>
-      <button onClick={this.handleClick.bind(this)}>click me!</button>
+      <button onClick={::this.handleClick}>click me!</button>
     </div>
   }
   handleClick () {
